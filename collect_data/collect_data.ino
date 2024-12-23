@@ -75,5 +75,23 @@ void loop() {
   angle_z_gyro = fmod(angle_z_gyro, 360.0);
   if (angle_z_gyro < 0) angle_z_gyro += 360.0;
 
+  // Print data in CSV format
+  Serial.print(val0);
+  Serial.print(",");
+  Serial.print(val1);
+  Serial.print(",");
+  Serial.print(val2);
+  Serial.print(",");
+  Serial.print(val3);
+  Serial.print(",");
+  Serial.print(val4);
+  Serial.print(",");
+  Serial.print(angle_x_acc);
+  Serial.print(",");
+  Serial.print(angle_y_acc);
+  Serial.print(",");
+  Serial.print(angle_z_gyro);
+  Serial.println(",A");
+
   delay(100);
 }
